@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Mokopane_New" Class="EbusDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Lourens\IKWEZI;Initial Catalog=Mokopane_New;User ID=sa" SettingsObjectName="EbusImport.Properties.Settings" SettingsPropertyName="Mokopane_NewConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Module" Member="Modules">
+    <Type Name="Module">
+      <Column Name="id_Module" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="str_LocationCode" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="int4_ModuleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_SignOnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_OnReaderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_SignOnDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_SignOnTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_OffReaderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_SignOffDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_SignOffTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_TrafficDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_ModuleOutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_ModuleOutTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_HdrModuleRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_HdrModuleTickets" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_HdrModulePasses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_ModuleRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_ModuleTickets" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_ModulePasses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_ModuleNonRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_ModuleTransfer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_ImportStamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_RecordMod" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_ImportModuleKey" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_BatchNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="byt_IeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="byt_ModuleType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="oFilename" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="oFileDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nFilename" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="Module_Duty" Member="Duties" ThisKey="id_Module" OtherKey="id_Module" Type="Duty" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Duty" Member="Duties">
+    <Type Name="Duty">
+      <Column Name="id_Duty" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Module" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="int4_DutyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="int4_OperatorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="str_ETMID" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="int4_GTValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_NextTicketNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutySeqNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_DutyStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_DutyStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_DutyStopDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_DutyStopTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_TrafficDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="str_BusID" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="int4_DutyRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutyTickets" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutyPasses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutyNonRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutyTransfer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="str_FirstRouteID" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="int2_FirstJourneyID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="dat_RecordMod" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_BatchNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="byt_IeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="str_EpromVersion" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="str_OperatorVersion" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="str_SpecialVersion" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="int4_DutyAnnulCash" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_DutyAnnulCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Duty_Journey" Member="Journeys" ThisKey="id_Duty" OtherKey="id_Duty" Type="Journey" />
+      <Association Name="Module_Duty" Member="Module" ThisKey="id_Module" OtherKey="id_Module" Type="Module" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Journey" Member="Journeys">
+    <Type Name="Journey">
+      <Column Name="id_Journey" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Duty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Module" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="str_RouteID" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="int2_JourneyID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int2_Direction" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="dat_JourneyStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_JourneyStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_JourneyStopDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_JourneyStopTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_TrafficDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_Distance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_Traveled" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_JourneyRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_JourneyTickets" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_JourneyPasses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_JourneyNonRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_JourneyTransfer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_RecordMod" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_BatchNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="byt_IeType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="dat_JourneyMoveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_JourneyArrivalTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_GPSDistance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Journey_Stage" Member="Stages" ThisKey="id_Journey" OtherKey="id_Journey" Type="Stage" />
+      <Association Name="Duty_Journey" Member="Duty" ThisKey="id_Duty" OtherKey="id_Duty" Type="Duty" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stage" Member="Stages">
+    <Type Name="Stage">
+      <Column Name="id_Stage" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Journey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Duty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Module" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="int2_StageID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="dat_StageDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_StageTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_RecordMod" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_BatchNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stage_Tran" Member="Trans" ThisKey="id_Stage" OtherKey="id_Stage" Type="Tran" />
+      <Association Name="Journey_Stage" Member="Journey" ThisKey="id_Journey" OtherKey="id_Journey" Type="Journey" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Trans" Member="Trans">
+    <Type Name="Tran">
+      <Column Name="id_Trans" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Stage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Journey" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Duty" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Module" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="str_LocationCode" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="int2_BoardingStageID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int2_AlightingStageID" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int2_Class" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int4_Revenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_NonRevenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int2_TicketCount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int2_PassCount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="int2_Transfers" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="dat_TransDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_TransTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="str_SerialNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="int4_RevenueBal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_TripBal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int2_AnnulCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_AnnulCash" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stage_Tran" Member="Stage" ThisKey="id_Stage" OtherKey="id_Stage" Type="Stage" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Waybill" Member="Waybills">
+    <Type Name="Waybill">
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dat_Start" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dat_End" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="int4_Operator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="str8_BusID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="str6_EtmID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="int4_EtmGrandTotal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="int4_Revenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dat_Match" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="dat_Actual" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Imported_Operator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Imported_BusID" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Imported_ETMID" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Imported_GT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Imported_Revenue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.InsertWaybil" Method="InsertWaybil">
+    <Parameter Name="ModuleID" Parameter="moduleID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="dat_Start" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="dat_End" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="int4_Operator" Type="System.Int32" DbType="Int" />
+    <Parameter Name="str8_BusID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="str6_EtmID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="int4_EtmGrandTotal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="int4_Revenue" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

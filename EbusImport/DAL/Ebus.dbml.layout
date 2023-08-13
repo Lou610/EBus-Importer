@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Ebus">
+  <DataContextMoniker Name="/EbusDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5ab69644-67bf-49d4-b07e-1e69dd189e63" isExpanded="false" absoluteBounds="0.5, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Module" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66c0db61-f916-4ed2-b790-f7bc414d7f18" absoluteBounds="0.51499999999999968, 3.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80faeca0-6ee7-4957-a91d-8068d857dff5" isExpanded="false" absoluteBounds="0.5, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Duty" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7404996-14c3-4710-a302-beb80fbec7ed" absoluteBounds="0.51499999999999968, 1.21, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 2.75); (1.5 : 1.2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EbusDataContext/Module/Module_Duty" />
+      <nodes>
+        <classShapeMoniker Id="5ab69644-67bf-49d4-b07e-1e69dd189e63" />
+        <classShapeMoniker Id="80faeca0-6ee7-4957-a91d-8068d857dff5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1ae8059d-029a-40cf-bee3-2aa2bb7616d8" isExpanded="false" absoluteBounds="3.25, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Journey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="172b62ed-e07b-4a4b-a334-6480a780b434" absoluteBounds="3.2649999999999997, 1.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 0.975); (3.25 : 0.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EbusDataContext/Duty/Duty_Journey" />
+      <nodes>
+        <classShapeMoniker Id="80faeca0-6ee7-4957-a91d-8068d857dff5" />
+        <classShapeMoniker Id="1ae8059d-029a-40cf-bee3-2aa2bb7616d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3a11c11-046e-441e-9fb6-bb7c4c586631" isExpanded="false" absoluteBounds="6.125, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Stage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6bcc1e82-70e3-4579-b031-2c44ccf153d6" absoluteBounds="6.14, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 0.975); (6.125 : 0.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EbusDataContext/Journey/Journey_Stage" />
+      <nodes>
+        <classShapeMoniker Id="1ae8059d-029a-40cf-bee3-2aa2bb7616d8" />
+        <classShapeMoniker Id="a3a11c11-046e-441e-9fb6-bb7c4c586631" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="07f7d978-4511-4f17-8e69-a718d4ee2a88" isExpanded="false" absoluteBounds="6, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Tran" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aacc0e15-eff7-4b68-a3f6-42adf6e84225" absoluteBounds="6.015, 3.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.0625 : 1.2); (7.0625 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EbusDataContext/Stage/Stage_Tran" />
+      <nodes>
+        <classShapeMoniker Id="a3a11c11-046e-441e-9fb6-bb7c4c586631" />
+        <classShapeMoniker Id="07f7d978-4511-4f17-8e69-a718d4ee2a88" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6639cd38-10d0-42e6-ac60-3c67f10f7e83" isExpanded="false" absoluteBounds="3.375, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/EbusDataContext/Waybill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f8fc1ec-d9ff-4553-bbd5-e82390e2e4c8" absoluteBounds="3.3899999999999997, 4.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
